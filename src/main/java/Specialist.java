@@ -15,8 +15,7 @@ public class Specialist implements Runnable {
     @Override
     public void run() {
         while (!calls.isEmpty()) {
-            System.out.println("Специалист " + name + " работает с номером " + calls.element());
-            calls.remove();
+            System.out.println("Специалист " + name + " работает с номером " + calls.poll());
             try {
                 Thread.sleep(WORKING_WITH_CLIENT);
             } catch (InterruptedException e) {
