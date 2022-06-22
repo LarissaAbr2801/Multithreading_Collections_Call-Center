@@ -6,7 +6,7 @@ public class Main {
     static final int THREADS_QUANTITY = 5;
 
     public static void main(String[] args) {
-        Queue<String> calls = new ConcurrentLinkedQueue<>();
+        Queue<String> calls = new LinkedBlockingQueue<>();
         Runnable atc = new ATC(calls);
         new Thread(atc).start();
 

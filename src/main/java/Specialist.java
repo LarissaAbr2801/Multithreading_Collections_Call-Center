@@ -21,7 +21,7 @@ public class Specialist implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
 
+        }
     }
 }
